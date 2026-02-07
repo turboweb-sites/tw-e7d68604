@@ -199,7 +199,7 @@ export default function TelegramSimulator() {
 
     if (botState === 'quiz') {
       addUserMessage(text);
-      addBotMessage(' Пожалуйста, выберите один из предложенных вариантов ответа, нажав на кнопку.');
+      addBotMessage('⚠️ Пожалуйста, выберите один из предложенных вариантов ответа, нажав на кнопку.');
       return;
     }
 
@@ -208,7 +208,7 @@ export default function TelegramSimulator() {
       if (text.toLowerCase().includes('заново') || text.toLowerCase().includes('ещё') || text.toLowerCase().includes('еще')) {
         handleStart();
       } else {
-        addBotMessage('Тест завершён! Чтобы бы пройти заново, отправьте /test');
+        addBotMessage('✅ Тест завершён! Чтобы пройти заново, отправьте /test');
       }
       return;
     }

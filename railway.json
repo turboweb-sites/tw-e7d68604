@@ -4,7 +4,6 @@
   },
   "deploy": {
     "startCommand": "npm run build && npx tsx server.ts",
-    "healthcheckPath": "/health",
     "restartPolicyType": "ON_FAILURE"
   }
 }

@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { createBot } from './src/bot/commands';
+import { createBot } from './src/bot/commands.js';
 
 const __filename = fileURLToPath(.url);
 const __dirname = path.dirname(__filename);
@@ -28,7 +28,7 @@ app.get('*', (_req, res) => {
 
 // Start Express server
 app.listen(PORT, () => {
-  console.log(` Server running on port ${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
 
 // Start Telegram bot
