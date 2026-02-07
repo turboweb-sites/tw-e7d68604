@@ -29,5 +29,6 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "@types/node": "^20.0.0"
-  }
+  },
+  "type": "module"
 }
