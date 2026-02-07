@@ -1,10 +1,9 @@
 interface BotInfoProps {
-  name: string;
   status: string;
   emoji: string;
 }
 
-export default function BotInfo({ name, status, emoji }: BotInfoProps) {
+export default function BotInfo({ status, emoji }: BotInfoProps) {
   return (
     <div className="flex items-center justify-between px-3 py-2 bg-telegram-header border-b border-telegram-border min-h-[56px]">
       <div className="flex items-center gap-3">
@@ -17,7 +16,7 @@ export default function BotInfo({ name, status, emoji }: BotInfoProps) {
           {emoji}
         </div>
         <div className="flex flex-col">
-          <span className="text-telegram-text font-semibold text-[15px] leading-tight">{name}</span>
+          <span className="text-telegram-text font-semibold text-[15px] leading-tight">Био Хелс</span>
           <span className="text-telegram-accent text-[13px] leading-tight">{status}</span>
         </div>
       </div>

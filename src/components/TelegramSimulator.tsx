@@ -208,7 +208,7 @@ export default function TelegramSimulator() {
       if (text.toLowerCase().includes('заново') || text.toLowerCase().includes('ещё') || text.toLowerCase().includes('еще')) {
         handleStart();
       } else {
-        addBotMessage('Тест завершён! Чтобы пройти заново, отправьте /test');
+        addBotMessage('Тест завершён! Чтобы бы пройти заново, отправьте /test');
       }
       return;
     }
@@ -227,7 +227,7 @@ export default function TelegramSimulator() {
   return (
     <div className="w-full max-w-md h-full max-h-[700px] flex flex-col rounded-2xl overflow-hidden shadow-2xl border border-telegram-border/50 bg-telegram-chat">
       {/* Header */}
-      <BotInfo name="БиоВозраст Бот" status="online" emoji="" />
+      <BotInfo />
 
       {/* Chat area */}
       <div
@@ -240,6 +240,7 @@ export default function TelegramSimulator() {
       >
         {messages.map(msg => (
           <ChatMessage
+            key={msg.id}
             message={msg}
             onButtonClick={handleOptionClick}
           />
